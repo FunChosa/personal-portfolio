@@ -33,7 +33,6 @@
 
 .filter-tabs li.active {
   color: var(--secondary-color);
-  font-weight: 600;
 }
 
 li {
@@ -88,6 +87,7 @@ li {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+
 .projectItem:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in;
@@ -127,5 +127,11 @@ li {
   .projectItem {
     width: 300px;
     height: 300px;
+  }
+  .projects .projectsHeader {
+    flex-direction: column;
+  }
+  .projects {
+    padding: 0 20px;
   }
 }

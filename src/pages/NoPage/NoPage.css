@@ -1,0 +1,31 @@
+.no-page {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 30px;
+}
+
+.back-home {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease;
+}
+
+.back-home:hover {
+  border-bottom: 2px solid rgba(0, 187, 212, 0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  .no-page {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+}

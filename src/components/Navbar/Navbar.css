@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: right;
   color: white;
+  padding: 0 30px;
 }
 
 .navbar a {

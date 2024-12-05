@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./ProjectItem.css";
+import "./Card.css";
 
-function ProjectItem({ image, name, id, desc, type, level }) {
+function Card({ cover, name, id, desc, type, level }) {
   const navigate = useNavigate();
   return (
     <div className="project-item" onClick={() => navigate("/project/" + id)}>
-      <img src={image} alt={name} />
+      <img src={cover} alt={name} />
       <div className="project-details">
         <div className="small-details">
           <span className="category">{type}</span>
@@ -19,4 +19,4 @@ function ProjectItem({ image, name, id, desc, type, level }) {
   );
 }
 
-export default ProjectItem;
+export default Card;

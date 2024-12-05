@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ProjectItem from "../../components/ProjectItem/ProjectItem";
+import Card from "../../components/Card/Card";
 import "./Projects.css";
-import { ProjectList } from "../../db/ProjectList";
+import { ProjectList } from "../../db/ProjectList.ts";
 
 function Projects() {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -58,11 +58,11 @@ function Projects() {
 
       <div className="projects-container">
         {projects.map((project, index) => (
-          <ProjectItem
+          <Card
             key={index}
             id={project.id}
             name={project.name}
-            image={project.image}
+            cover={project.cover}
             desc={project.description}
             type={project.type}
             level={project.level}

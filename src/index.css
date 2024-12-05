@@ -13,3 +13,7 @@
   --primary-color: #0d0d0f;
   --secondary-color: #00bcd4;
 }
+
+body {
+  min-width: 400px;
+}

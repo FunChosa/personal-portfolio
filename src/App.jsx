@@ -4,8 +4,8 @@ import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import ProjectDisplay from "./pages/ProjectDisplay/ProjectDisplay";
-import Blogs from "./pages/Blogs/Blogs";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
+import NoPage from "./pages/NoPage/NoPage";
 
 function App() {
   return (
@@ -15,9 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/project/:id" element={<ProjectDisplay />} />
-          <Route path="/blogs" element={<Blogs />} />
-          {/* <Route path="*" element={<NoPage />} /> */}
+          <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />
       </Router>
