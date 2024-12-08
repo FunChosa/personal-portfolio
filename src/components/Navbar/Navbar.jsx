@@ -37,6 +37,14 @@ function Navbar() {
         >
           Projects
         </Link>
+        <Link
+          to="/about"
+          style={{
+            color: location.pathname === "/about" ? "#00bcd4" : "white",
+          }}
+        >
+          About
+        </Link>
       </div>
     </div>
   );

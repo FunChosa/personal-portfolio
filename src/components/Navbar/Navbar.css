@@ -4,6 +4,7 @@
   background: var(--primary-color);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .links {
@@ -74,6 +75,9 @@
     display: flex;
   }
   #close a {
+    display: none;
+  }
+  #close .links {
     display: none;
   }
 }

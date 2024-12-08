@@ -58,15 +58,7 @@ function Projects() {
 
       <div className="projects-container">
         {projects.map((project, index) => (
-          <Card
-            key={index}
-            id={project.id}
-            name={project.name}
-            cover={project.cover}
-            desc={project.description}
-            type={project.type}
-            level={project.level}
-          />
+          <Card key={index} project={project} />
         ))}
       </div>
     </div>

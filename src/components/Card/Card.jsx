@@ -2,7 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Card.css";
 
-function Card({ cover, name, id, desc, type, level }) {
+function Card({ project }) {
+  const { cover, name, id, desc, type, level } = project;
   const navigate = useNavigate();
   return (
     <div className="project-item" onClick={() => navigate("/project/" + id)}>
