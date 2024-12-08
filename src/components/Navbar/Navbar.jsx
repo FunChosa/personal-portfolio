@@ -21,8 +21,22 @@ function Navbar() {
       </div>
 
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
+        <Link
+          to="/"
+          style={{
+            color: location.pathname === "/" ? "#00bcd4" : "white",
+          }}
+        >
+          Home
+        </Link>
+        <Link
+          to="/projects"
+          style={{
+            color: location.pathname === "/projects" ? "#00bcd4" : "white",
+          }}
+        >
+          Projects
+        </Link>
       </div>
     </div>
   );

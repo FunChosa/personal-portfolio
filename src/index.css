@@ -15,5 +15,5 @@
 }
 
 body {
-  min-width: 400px;
+  background-color: var(--primary-color);
 }

@@ -7,13 +7,14 @@
   align-items: center;
   flex-direction: column;
   padding-top: 10px;
-  margin-top: 200px;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.04);
+  margin-top: 20px; */
 }
 
 .socialMedia svg {
   color: white;
-  margin: 20px;
-  font-size: 70px;
+  margin: 10px;
+  font-size: 50px;
   cursor: pointer;
   transition: 0.2s ease;
 }
@@ -28,6 +29,6 @@
 
 @media only screen and (max-width: 600px) {
   .footer svg {
-    font-size: 50px;
+    font-size: 40px;
   }
 }

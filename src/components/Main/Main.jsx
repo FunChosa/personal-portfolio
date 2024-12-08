@@ -4,9 +4,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Typewriter from "typewriter-effect";
 import { Links } from "../../db/Links";
-import "./About.css";
+import "./Main.css";
 
-function About() {
+function Main() {
   return (
     <div className="about">
       <h2>
@@ -43,4 +43,4 @@ function About() {
   );
 }
 
-export default About;
+export default Main;

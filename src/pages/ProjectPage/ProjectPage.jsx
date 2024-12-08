@@ -1,36 +1,35 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ProjectList } from "../../db/ProjectList.ts";
 import "./ProjectPage.css";
 import NoPage from "../NoPage/NoPage.jsx";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 function ProjectPage() {
   const { id } = useParams();
   const project = ProjectList.find((project) => project.id === id);
-
+  const { name, description, cover, code, demo } = project;
   if (!project) {
     return <NoPage />;
   }
   return (
     <div className="project1">
       <div className="project1-container">
+        <Link to="/projects" className="back">
+          ← Back to Projects
+        </Link>
         <div className="project1-details">
-          <h1>
-            {project.name}
-            <GitHubIcon
-              className="project1 svg"
-              onClick={() => window.open(project.code, "_blank")}
-            />
-            <PlayCircleIcon
-              className="project1 svg"
-              onClick={() => window.open(project.demo, "_blank")}
-            />
-          </h1>
-          <p>{project.description}</p>
+          <h1>{name}</h1>
+          <p>{description}</p>
         </div>
-        <img src={project.image} alt={project.name} />
+        <img src={cover} alt={name} />
+        <Link to={code} target="_blank" className="">
+          View Code <GitHubIcon />
+        </Link>
+        <Link to={demo} target="_blank" className="">
+          Live Demo <LaunchIcon />
+        </Link>
       </div>
     </div>
   );

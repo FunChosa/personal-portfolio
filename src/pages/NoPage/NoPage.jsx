@@ -16,7 +16,7 @@ function NoPage() {
         />
       </h2>
       <Link to="/" className="back-home">
-        Go Back Home
+        ← Go Back Home
       </Link>
     </div>
   );
