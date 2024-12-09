@@ -2,6 +2,7 @@ import React from "react";
 import { ProjectList } from "../../db/ProjectList";
 import Card from "../../components/Card/Card";
 import "./FeaturedProjects.css";
+import { Link } from "react-router-dom";
 
 function FeaturedProjects() {
   const featuredProjectsIdList = [
@@ -22,9 +23,10 @@ function FeaturedProjects() {
           <Card key={index} project={project} />
         ))}
       </div>
-      <a className="link-btn" onClick={() => window.open("/projects", "_self")}>
+
+      <Link to="/projects" className="link-btn">
         See All Projects →
-      </a>
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ProjectList } from "../../db/ProjectList.ts";
 import "./ProjectPage.css";
@@ -9,10 +9,13 @@ import LaunchIcon from "@mui/icons-material/Launch";
 function ProjectPage() {
   const { id } = useParams();
   const project = ProjectList.find((project) => project.id === id);
-  const { name, description, cover, code, demo } = project;
+  const { name, desc, cover, code, demo } = project;
   if (!project) {
     return <NoPage />;
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="project1">
       <div className="project1-container">
@@ -21,7 +24,7 @@ function ProjectPage() {
         </Link>
         <div className="project1-details">
           <h1>{name}</h1>
-          <p>{description}</p>
+          <p>{desc}</p>
         </div>
         <img src={cover} alt={name} />
         <Link to={code} target="_blank" className="">

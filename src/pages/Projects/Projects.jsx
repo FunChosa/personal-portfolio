@@ -9,7 +9,8 @@ function Projects() {
 
   useEffect(() => {
     setProjects(ProjectList);
-  }, []);
+    window.scrollTo(0, 0);
+  }, [selectedFilter]);
 
   useEffect(() => {
     setProjects(

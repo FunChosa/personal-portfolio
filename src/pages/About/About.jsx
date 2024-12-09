@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import avatar from "../../images/avatar.jpeg";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="aboutMe-container">
       <div className="info">
@@ -14,7 +18,6 @@ function About() {
             <p className="aboutMe-link">Download CV</p>
           </div>
         </div>
-        <h3>✨ Hi there!</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
           fuga ipsum maxime possimus exercitationem, totam officiis optio omnis?

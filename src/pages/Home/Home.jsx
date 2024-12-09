@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import Main from "../../components/Main/Main";
 import FeaturedProjects from "../../components/FeaturedProjects/FeaturedProjects";
-import About from "../About/About";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home">
       <Main />
