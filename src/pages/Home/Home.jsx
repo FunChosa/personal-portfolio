@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Home.css";
 import Main from "../../components/Main/Main";
 import FeaturedProjects from "../../components/FeaturedProjects/FeaturedProjects";
+import Contacts from "../../components/Contacts/Contacts";
 
 function Home() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function Home() {
     <div className="home">
       <Main />
       <FeaturedProjects />
+      <Contacts />
     </div>
   );
 }

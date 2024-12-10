@@ -14,6 +14,11 @@
   --secondary-color: #00bcd4;
 }
 
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 body {
   background-color: var(--primary-color);
 }
