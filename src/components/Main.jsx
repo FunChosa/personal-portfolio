@@ -3,13 +3,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Typewriter from "typewriter-effect";
-import { Links } from "../../db/Links";
-import "./Main.css";
+import { Links } from "../db/Links";
+import "../styles/Main.css";
 
 function Main() {
   return (
-    <div className="about">
-      <h2>
+    <div className="main-container">
+      <h2 className="main-title">
         Hi there!
         <Typewriter
           options={{

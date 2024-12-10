@@ -5,19 +5,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: var(--primary-text-color);
   font-size: 30px;
 }
 
-.back-home {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
-  border-bottom: 2px solid transparent;
-  transition: 0.2s ease;
-}
-
-.back-home:hover {
-  border-bottom: 2px solid rgba(0, 187, 212, 0.5);
+.no-page-title {
+  color: var(--secondary-color);
+  font-size: 50px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -25,7 +19,7 @@
     font-size: 20px;
   }
 
-  h2 {
+  .no-page-title {
     font-size: 30px;
   }
 }

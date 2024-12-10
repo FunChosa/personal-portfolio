@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./Navbar.css";
+import "../styles/Navbar.css";
 import ReorderIcon from "@mui/icons-material/Reorder";
 
 function Navbar() {
@@ -12,6 +12,11 @@ function Navbar() {
     setExpandNavbar(false);
   }, [location]);
 
+  const links = [
+    { name: "Home", link: "/" },
+    { name: "Projects", link: "/projects" },
+  ];
+
   return (
     <div className="navbar" id={expandNavbar ? "open" : "close"}>
       <div className="toggleButton">
@@ -20,31 +25,19 @@ function Navbar() {
         </button>
       </div>
 
-      <div className="links">
-        <Link
-          to="/"
-          style={{
-            color: location.pathname === "/" ? "#00bcd4" : "white",
-          }}
-        >
-          Home
-        </Link>
-        <Link
-          to="/projects"
-          style={{
-            color: location.pathname === "/projects" ? "#00bcd4" : "white",
-          }}
-        >
-          Projects
-        </Link>
-        <Link
-          to="/about"
-          style={{
-            color: location.pathname === "/about" ? "#00bcd4" : "white",
-          }}
-        >
-          About
-        </Link>
+      <div className="navbar-links">
+        {links.map((link) => (
+          <Link
+            to={link.link}
+            style={{
+              color: location.pathname === link.link ? "#00bcd4" : "white",
+            }}
+            className="navbar-link"
+            key={link.name}
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
     </div>
   );

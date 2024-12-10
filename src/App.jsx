@@ -1,12 +1,11 @@
-import "./App.css";
+import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Projects from "./pages/Projects/Projects";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import ProjectPage from "./pages/ProjectPage/ProjectPage";
-import NoPage from "./pages/NoPage/NoPage";
-import About from "./pages/About/About";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./pages/Home.jsx";
+import Projects from "./pages/Projects.jsx";
+import ProjectPage from "./pages/ProjectPage.jsx";
+import NoPage from "./pages/NoPage.jsx";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<ProjectPage />} />
-          <Route path="/about" element={<About />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />

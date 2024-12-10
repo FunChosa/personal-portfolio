@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Card.css";
+import "../styles/Card.css";
 
 function Card({ project }) {
   const { cover, name, id, desc, type, level } = project;

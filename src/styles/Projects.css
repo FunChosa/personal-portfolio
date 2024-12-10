@@ -1,14 +1,14 @@
-.projects {
+.projects-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: var(--primary-text-color);
   padding: 0 50px;
 }
 
-.projects .projectsHeader {
+.projects-header {
   width: 100%;
   height: 100px;
   display: flex;
@@ -17,7 +17,7 @@
   flex-direction: row;
 }
 
-.projects .projectTitle {
+.projects-title {
   color: var(--secondary-color);
   font-size: 2.5rem;
   font-weight: 600;
@@ -31,17 +31,10 @@
   font-size: 1.2rem;
 }
 
-.filter-tabs li.active {
-  color: var(--secondary-color);
-}
-
-li {
-  list-style: none;
-}
-
 .filter-tabs li {
+  list-style: none;
   cursor: pointer;
-  color: white;
+  color: var(--primary-text-color);
   transition: 0.2s ease;
   display: flex;
   gap: 5px;
@@ -49,7 +42,11 @@ li {
   font-weight: 400;
 }
 
-.count {
+.filter-tabs li.active {
+  color: var(--secondary-color);
+}
+
+.projects-count {
   margin-block: 1rem 2rem;
   text-align: right;
   width: 100%;
@@ -57,19 +54,19 @@ li {
   font-size: 1rem;
 }
 
-.project-count-value {
+.projects-count-value {
   color: var(--secondary-color);
   margin-right: 5px;
   font-weight: 600;
   font-size: 1rem;
 }
 
-.project-count-parameter {
-  color: white;
+.projects-count-parameter {
+  color: var(--primary-text-color);
   font-size: 1rem;
 }
 
-.projects-container {
+.projects-list {
   width: 100%;
   height: auto;
   display: grid;
@@ -79,59 +76,28 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.projectItem {
-  border-radius: 15px;
-  width: 300px;
-  height: 300px;
-  margin: 40px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-.projectItem:hover {
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in;
-  cursor: pointer;
-}
-
-.projectItem .bgImage {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.projectItem h1 {
-  font-size: 25px;
-}
-
 @media only screen and (max-width: 1300px) {
-  .projectList {
+  .projects-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .projectList {
+  .projects-list {
     grid-template-columns: 1fr;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .projectList {
+  .projects-list {
     width: 100%;
   }
-  .projectItem {
-    width: 300px;
-    height: 300px;
-  }
-  .projects .projectsHeader {
+
+  .projects-header {
     flex-direction: column;
   }
-  .projects {
+
+  .projects-container {
     padding: 0 20px;
   }
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import { ProjectList } from "../../db/ProjectList";
-import Card from "../../components/Card/Card";
-import "./FeaturedProjects.css";
+import { ProjectList } from "../db/ProjectList";
+import Card from "./Card";
 import { Link } from "react-router-dom";
+import "../styles/FeaturedProjects.css";
 
 function FeaturedProjects() {
   const featuredProjectsIdList = [
@@ -16,8 +16,8 @@ function FeaturedProjects() {
     ProjectList.find((p) => p.id === project)
   );
   return (
-    <div className="featured-projects">
-      <div style={{ height: "100px" }} id="projects" />
+    <>
+      <div className="featured-projects-title" id="projects" />
       <div className="featured-projects-container">
         {featuredProjects.map((project, index) => (
           <Card key={index} project={project} />
@@ -27,7 +27,7 @@ function FeaturedProjects() {
       <Link to="/projects" className="link-btn">
         See All Projects →
       </Link>
-    </div>
+    </>
   );
 }
 

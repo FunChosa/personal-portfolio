@@ -1,12 +1,12 @@
 import React from "react";
-import "./NoPage.css";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
+import "../styles/NoPage.css";
 
 function NoPage() {
   return (
     <div className="no-page">
-      <h2>
+      <h2 className="no-page-title">
         <Typewriter
           options={{
             strings: ["Error 404", "Page Not Found"],
@@ -15,7 +15,7 @@ function NoPage() {
           }}
         />
       </h2>
-      <Link to="/" className="back-home">
+      <Link to="/" className="link-btn">
         ← Go Back Home
       </Link>
     </div>

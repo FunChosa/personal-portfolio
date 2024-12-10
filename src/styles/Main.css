@@ -1,4 +1,4 @@
-.about {
+.main-container {
   width: 100%;
   height: calc(100vh - 100px);
   display: flex;
@@ -7,31 +7,13 @@
   align-items: center;
   text-align: center;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--primary-text-color);
+  gap: 1rem;
 }
 
-h2 {
+.main-title {
   font-size: 60px;
   color: var(--secondary-color);
-}
-
-.link-btn {
-  cursor: pointer;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
-  transition: 0.2s ease;
-  margin-top: 30px;
-  font-size: 20px;
-  border-bottom: 2px solid transparent;
-}
-
-.link-btn:hover {
-  border-bottom: 2px solid rgba(0, 187, 212, 0.5);
-}
-
-.about .prompt {
-  width: 40%;
-  font-size: 30px;
 }
 
 .prompt {
@@ -39,12 +21,14 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 40%;
+  font-size: 30px;
 }
 
 .prompt svg {
   font-size: 60px;
   margin: 5px;
-  color: white;
+  color: var(--primary-text-color);
   cursor: pointer;
   transition: 0.2s ease;
 }
@@ -54,18 +38,18 @@ h2 {
 }
 
 @media only screen and (max-width: 900px) {
-  .about h2 {
+  .main-title {
     font-size: 56px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .about h2 {
+  .main-title {
     font-size: 40px;
     height: 200px;
   }
 
-  .about .prompt {
+  .main-container .prompt {
     margin-top: 10px;
     font-size: 20px;
     width: 80%;
