@@ -7,7 +7,7 @@
   align-items: center;
   text-align: center;
   background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  color: white;
   gap: 1rem;
 }
 
@@ -28,7 +28,7 @@
 .prompt svg {
   font-size: 60px;
   margin: 5px;
-  color: var(--primary-text-color);
+  color: white;
   cursor: pointer;
   transition: 0.2s ease;
 }

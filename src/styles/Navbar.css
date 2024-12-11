@@ -13,15 +13,15 @@
   display: flex;
   align-items: center;
   justify-content: right;
-  color: var(--primary-text-color);
+  color: white;
   padding: 0 30px;
 }
 
 .navbar-link {
-  color: var(--primary-text-color);
+  color: white;
   text-decoration: none;
   margin: 20px;
-  font-size: 25px;
+  font-size: 20px;
   transition: color 0.3s ease-in-out;
   width: fit-content;
   border-bottom: none;
@@ -48,7 +48,7 @@
   margin-right: 20px;
   background-color: transparent;
   border: none;
-  color: var(--primary-text-color);
+  color: white;
   cursor: pointer;
 }
 

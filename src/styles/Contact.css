@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--primary-text-color);
+  color: white;
   font-size: 30px;
   margin-top: 2rem;
   gap: 1.5rem;
@@ -12,7 +12,7 @@
 }
 
 .socialMedia svg {
-  color: var(--primary-text-color);
+  color: white;
   margin: 10px;
   font-size: 50px;
   cursor: pointer;

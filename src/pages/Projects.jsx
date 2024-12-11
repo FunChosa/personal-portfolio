@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import { ProjectList } from "../db/ProjectList";
 import "../styles/Projects.css";
+import Contact from "../components/Contact";
 
 function Projects() {
   const filterTabs = ["all", "base", "game"];
@@ -50,6 +51,7 @@ function Projects() {
           <Card key={index} project={project} />
         ))}
       </div>
+      <Contact />
     </div>
   );
 }

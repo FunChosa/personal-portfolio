@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import "../styles/NoPage.css";
 
 function NoPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="no-page">
       <h2 className="no-page-title">

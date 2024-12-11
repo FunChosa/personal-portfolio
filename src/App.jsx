@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import NoPage from "./pages/NoPage.jsx";
+import About from "./pages/About.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />
