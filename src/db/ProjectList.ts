@@ -11,6 +11,10 @@ import nasaApodImage from "../images/nasaApodImage.png";
 import binaryClockImage from "../images/binaryClockImage.png";
 import wordleGameImage from "../images/wordleGameImage.png";
 import colorGenImage from "../images/colorGenImage.png";
+import mineSweeperImage from "../images/mineSweeperImage.png";
+import pokedexAppImage from "../images/pokedexAppImage.png";
+import toDoAppImage from "../images/toDoAppImage.png";
+import weatherAppImage from "../images/weatherAppImage.png";
 
 export interface IProject {
   name: string;
@@ -89,7 +93,7 @@ export const ProjectList: IProject[] = [
     name: "Binary Clock",
     id: "binary-clock",
     cover: binaryClockImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    desc: "A simple and visually appealing binary clock application that displays the current time and date in binary format. Each digit is represented using four LEDs (simulated with colored circles).",
     type: "base",
     code: "https://github.com/FunChosa/binary-clock",
     demo: "https://funchosa-binary-clock.netlify.app",
@@ -99,7 +103,7 @@ export const ProjectList: IProject[] = [
     name: "Tic Tac Toe",
     id: "tic-tac-toe-game",
     cover: ticTacToeImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    desc: "A simple and classic Tic-Tac-Toe game for two players on a single device. The game is played on a standard 3x3 grid.",
     type: "game",
     code: "https://github.com/FunChosa/tic-tac-toe-game",
     demo: "https://funchosa-tic-tac-toe-game.netlify.app",
@@ -109,7 +113,7 @@ export const ProjectList: IProject[] = [
     name: "Wordle",
     id: "wordle-game",
     cover: wordleGameImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    desc: "A classic Wordle game built with React and Vite, challenging players to guess a hidden five-letter word in six attempts or less.",
     type: "game",
     code: "https://github.com/FunChosa/wordle-game",
     demo: "https://funchosa-wordle-game.netlify.app",
@@ -119,7 +123,7 @@ export const ProjectList: IProject[] = [
     name: "Color generator",
     id: "color-generator",
     cover: colorGenImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    desc: "A simple color generator application built with React, allowing users to generate random HEX color codes and copy them directly to their clipboard.",
     type: "base",
     code: "https://github.com/FunChosa/color-generator",
     demo: "https://funchosa-color-generator.netlify.app",
@@ -148,8 +152,8 @@ export const ProjectList: IProject[] = [
   {
     name: "Todo app",
     id: "todo-app",
-    cover: noImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    cover: toDoAppImage,
+    desc: "This is a basic to-do list application built with React, Vite, Tailwind CSS, and Firebase. The primary goal of this project was to practice using Firebase for data persistence.",
     type: "base",
     code: "https://github.com/FunChosa/todo-app",
     demo: "https://funchosa-todo-app.netlify.app",
@@ -158,8 +162,8 @@ export const ProjectList: IProject[] = [
   {
     name: "Weather app",
     id: "weather-app",
-    cover: noImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    cover: weatherAppImage,
+    desc: "A React application built with Vite, fetching real-time weather data using the WeatherAPI https://www.weatherapi.com/. This app utilizes the browser's geolocation capabilities to determine the user's location and display the relevant weather information.",
     type: "base",
     code: "https://github.com/FunChosa/weather-app",
     demo: "https://funchosa-weather-app.netlify.app",
@@ -168,8 +172,8 @@ export const ProjectList: IProject[] = [
   {
     name: "Pokedex",
     id: "pokedex",
-    cover: noImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    cover: pokedexAppImage,
+    desc: "A simple Pokedex application built with React and Vite. Displays basic information about Pokémon.",
     type: "base",
     code: "https://github.com/FunChosa/pokedex",
     demo: "https://funchosa-pokedex.netlify.app",
@@ -178,8 +182,8 @@ export const ProjectList: IProject[] = [
   {
     name: "Mine-sweeper",
     id: "mine-sweeper-game",
-    cover: noImage,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    cover: mineSweeperImage,
+    desc: "A classic Minesweeper game built with React and Vite. This version features a 10x10 grid with 10 randomly placed mines.",
     type: "game",
     code: "https://github.com/FunChosa/mine-sweeper-game",
     demo: "https://funchosa-mine-sweeper-game.netlify.app",
