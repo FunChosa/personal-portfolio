@@ -11,6 +11,7 @@ function FeaturedProjects() {
     "pomodoro-timer",
     "hangman-game",
     "password-generator",
+    "stellar-burger",
   ];
   const featuredProjects = featuredProjectsIdList.map((project) =>
     ProjectList.find((p) => p.id === project)

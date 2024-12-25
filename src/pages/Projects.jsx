@@ -5,7 +5,7 @@ import "../styles/Projects.css";
 import Contact from "../components/Contact";
 
 function Projects() {
-  const filterTabs = ["all", "base", "game"];
+  const filterTabs = ["all", "base", "game", "api"];
   const [selectedFilter, setSelectedFilter] = useState(filterTabs[0]);
   const [projects, setProjects] = useState(ProjectList);
 

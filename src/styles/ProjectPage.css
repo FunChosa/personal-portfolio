@@ -27,11 +27,73 @@
 .project-page-desc {
   font-size: 20px;
   color: white;
-  font-weight: 200;
+  font-weight: 300;
+}
+
+.project-page-features {
+  color: white;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 18px;
+  list-style-type: circle;
+}
+
+.project-page-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-page-links a {
+  font-size: 16px;
+}
+
+.live-demo svg {
+  animation: live-demo 2s ease-in-out infinite;
+}
+
+@keyframes live-demo {
+  0% {
+    opacity: 1;
+    color: var(--secondary-color);
+  }
+  50% {
+    opacity: 0.6;
+    color: var(--secondary-text-color);
+  }
+  100% {
+    opacity: 1;
+    color: var(--secondary-color);
+  }
+}
+
+.project-page-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: var(--primary-text-color);
+  opacity: 0.6;
 }
 
 .project-page-cover {
   width: 100%;
+}
+
+.hard {
+  color: var(--hard-color);
+}
+
+.easy {
+  color: var(--easy-color);
+}
+
+.medium {
+  color: var(--medium-color);
 }
 
 @media only screen and (max-width: 800px) {
