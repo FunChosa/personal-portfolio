@@ -31,7 +31,10 @@ function Navbar() {
           <Link
             to={link.link}
             style={{
-              color: location.pathname === link.link ? "#00bcd4" : "white",
+              color:
+                location.pathname === link.link
+                  ? "var(--secondary-color)"
+                  : "white",
             }}
             className="navbar-link"
             key={link.name}
