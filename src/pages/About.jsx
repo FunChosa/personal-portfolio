@@ -18,6 +18,7 @@ function About() {
   return (
     <div className="about-container">
       <img src={avatar} alt="avatar" className="avatar" />
+      <h2>Hi there, I`m Naaz</h2>
       <div className="skills">
         <SiJavascript />
         <SiTypescript />

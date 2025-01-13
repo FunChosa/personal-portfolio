@@ -19,9 +19,14 @@ function ProjectPage() {
 
   return (
     <div className="project-page-container">
-      <Link to="/projects" className="link-btn">
+      <a
+        className="link-btn"
+        onClick={() => {
+          window.history.back();
+        }}
+      >
         ← Back to Projects
-      </Link>
+      </a>
       <div className="project-page-details">
         <h1 className="project-page-title">{name}</h1>
         <p className="project-page-desc">{desc}</p>

@@ -3,15 +3,20 @@
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  transition: 0.2s ease;
   color: var(--primary-text-color);
   transition: all 0.5s ease-in-out;
   position: relative;
   background-color: #111111;
 }
 
-.project-item:hover {
+.project-item:hover,
+.project-item:focus-within {
   box-shadow: 0 0 50px var(--secondary-color), 0 0 5px var(--secondary-color);
+  .demo-btn {
+    background-color: var(--secondary-color);
+    color: #000000;
+    border-color: var(--secondary-color);
+  }
 }
 
 .project-item img {
@@ -26,7 +31,7 @@
   padding: 1rem;
 }
 
-.project-details .small-details {
+.project-details .tags-details {
   border-top: 1px solid #1f1f1f;
   margin-top: .7rem;
   padding-top: .7rem;
@@ -73,7 +78,7 @@
   font-weight: 400;
 }
 
-.demo {
+.demo-btn {
   position: absolute;
   z-index: 3;
   top: 230px;
@@ -89,11 +94,6 @@
   font-size: 11px;
   font-weight: 600;
   color: #ffffff;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.demo:hover {
-  background-color: var(--secondary-color);
-  color: #000000;
-  border-color: var(--secondary-color);
-}

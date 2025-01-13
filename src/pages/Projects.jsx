@@ -3,16 +3,15 @@ import Card from "../components/Card";
 import { ProjectList } from "../db/ProjectList";
 import "../styles/Projects.css";
 import Contact from "../components/Contact";
+import { useSearchParams } from "react-router-dom";
 
 function Projects() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const filterTabs = ["all", "base", "game", "api"];
-  const [selectedFilter, setSelectedFilter] = useState(filterTabs[0]);
+  const [selectedFilter, setSelectedFilter] = useState(
+    searchParams.get("type") || filterTabs[0]
+  );
   const [projects, setProjects] = useState(ProjectList);
-
-  useEffect(() => {
-    setProjects(ProjectList);
-    window.scrollTo(0, 0);
-  }, [selectedFilter]);
 
   useEffect(() => {
     setProjects(
@@ -20,6 +19,8 @@ function Projects() {
         selectedFilter !== "all" ? project.type === selectedFilter : true
       )
     );
+    setSearchParams({ type: selectedFilter });
+    window.scrollTo(0, 0);
   }, [selectedFilter]);
 
   return (
