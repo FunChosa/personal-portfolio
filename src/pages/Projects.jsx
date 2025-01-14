@@ -11,22 +11,31 @@ function Projects() {
   const [selectedFilter, setSelectedFilter] = useState(
     searchParams.get("type") || filterTabs[0]
   );
+  const [searchQuery, setSearchQuery] = useState(
+    searchParams.get("search") || ""
+  );
   const [projects, setProjects] = useState(ProjectList);
 
   useEffect(() => {
     setProjects(
-      ProjectList.filter((project) =>
-        selectedFilter !== "all" ? project.type === selectedFilter : true
-      )
+      ProjectList.filter((project) => {
+        const matchesFilter =
+          selectedFilter !== "all" ? project.type === selectedFilter : true;
+        const matchesSearch = project.name
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase());
+        return matchesFilter && matchesSearch;
+      })
     );
-    setSearchParams({ type: selectedFilter });
+    setSearchParams({ type: selectedFilter, search: searchQuery });
     window.scrollTo(0, 0);
-  }, [selectedFilter]);
+  }, [selectedFilter, searchQuery]);
 
   return (
     <div className="projects-container">
       <div className="projects-header">
         <h1 className="projects-title">Projects</h1>
+
         <ul className="filter-tabs">
           {filterTabs.map((tab) => (
             <li
@@ -43,15 +52,36 @@ function Projects() {
       </div>
 
       <div className="projects-count">
+        <input
+          type="text"
+          placeholder="Search projects..."
+          value={searchQuery}
+          onChange={(e) => {
+            setSearchQuery(e.target.value.toLowerCase());
+          }}
+          className="search-input"
+        />
         <span className="projects-count-value">{projects.length}</span>
-        <span className="projects-count-parameter">projects</span>
+        <span className="projects-count-parameter">
+          {projects.length === 1 ? "project" : "projects"}
+        </span>
       </div>
 
-      <div className="projects-list">
-        {projects.map((project, index) => (
-          <Card key={index} project={project} />
-        ))}
-      </div>
+      {projects.length === 0 ? (
+        <div className="no-projects">No projects found</div>
+      ) : (
+        <div
+          className={`${
+            projects.length <= 2
+              ? "projects-list-less-2-elements"
+              : "projects-list"
+          }`}
+        >
+          {projects.map((project, index) => (
+            <Card key={index} project={project} />
+          ))}
+        </div>
+      )}
       <Contact />
     </div>
   );
