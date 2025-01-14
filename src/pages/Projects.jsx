@@ -3,16 +3,18 @@ import Card from "../components/Card";
 import { ProjectList } from "../db/ProjectList";
 import "../styles/Projects.css";
 import Contact from "../components/Contact";
-import { useSearchParams } from "react-router-dom";
+// import { useSearchParams } from "react-router-dom";
 
 function Projects() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  // const [searchParams, setSearchParams] = useSearchParams();
   const filterTabs = ["all", "base", "game", "api"];
   const [selectedFilter, setSelectedFilter] = useState(
-    searchParams.get("type") || filterTabs[0]
+    // searchParams.get("type") || filterTabs[0]
+    filterTabs[0]
   );
   const [searchQuery, setSearchQuery] = useState(
-    searchParams.get("search") || ""
+    // searchParams.get("search") || ""
+    ""
   );
   const [projects, setProjects] = useState(ProjectList);
 
@@ -27,7 +29,7 @@ function Projects() {
         return matchesFilter && matchesSearch;
       })
     );
-    setSearchParams({ type: selectedFilter, search: searchQuery });
+    // setSearchParams({ type: selectedFilter, search: searchQuery });
     window.scrollTo(0, 0);
   }, [selectedFilter, searchQuery]);
 
