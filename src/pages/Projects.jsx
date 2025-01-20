@@ -55,7 +55,7 @@ function Projects() {
 
       <div className="projects-count">
         <input
-          type="text"
+          type="search"
           placeholder="Search projects..."
           value={searchQuery}
           onChange={(e) => {

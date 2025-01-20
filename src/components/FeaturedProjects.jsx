@@ -6,12 +6,12 @@ import "../styles/FeaturedProjects.css";
 
 function FeaturedProjects() {
   const featuredProjectsIdList = [
-    "tic-tac-toe-game",
-    "wordle-game",
+    "memory-cards-app",
+    "stellar-burger",
     "pomodoro-timer",
     "hangman-game",
-    "password-generator",
-    "stellar-burger",
+    "wordle-game",
+    "tic-tac-toe-game",
   ];
   const featuredProjects = featuredProjectsIdList.map((project) =>
     ProjectList.find((p) => p.id === project)
